@@ -17,8 +17,7 @@ export type CaseStudy = {
 
 export const githubProfile = 'https://github.com/lokeshram1';
 export const email = 'lokeshramloka@gmail.com';
-// Add the actual profile URL when available; never link to LinkedIn's generic homepage.
-export const linkedInUrl: string | undefined = undefined;
+export const linkedInUrl = 'https://www.linkedin.com/in/lokesh-ram-hariram/?isSelfProfile=true';
 
 export const projects: CaseStudy[] = [
   {

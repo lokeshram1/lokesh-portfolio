@@ -24,7 +24,8 @@ An editorial, responsive portfolio built with Next.js 15, React 19, TypeScript, 
 
 ## Before publishing
 
-- Add the actual LinkedIn profile URL to `linkedInUrl` in `app/content.ts`; LinkedIn is intentionally not linked to its generic homepage.
+- The LinkedIn profile URL is configured in `linkedInUrl` in `app/content.ts`.
+- Replace `public/profile.jpg` to update the homepage portrait. The image is cropped with CSS to fit the existing hero frame.
 - Confirm the GitHub profile URL in `githubProfile` and replace profile-level project destinations with direct repository URLs when available.
 - The resume PDF is included at `public/Lokesh-Ram-Resume.pdf`.
 - Verify IncidentIQ implementation notes and integrations against its repository. That repository was not included in the source ZIP, so the case study explicitly limits its claims.
