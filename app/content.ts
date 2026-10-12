@@ -100,8 +100,41 @@ export const skills = [
 ];
 
 export const experience = [
-  { date: 'AUG 2025 — JAN 2026', role: 'Applied AI/ML Engineer', org: 'American College of Emergency Physicians (ACEP) · Irving, TX', bullets: ['Contributed to AskEMDI, an LLM-powered natural-language-to-SQL platform built with Amazon Bedrock and Anthropic Claude.', 'Built Azure Data Factory and Synapse pipelines for a 23M+ encounter dataset, with Python and SQL validation before downstream AI workflows.', 'Worked with clinicians and operations stakeholders to gather requirements, demonstrate prototypes, and refine query logic and outputs.'] },
-  { date: 'AUG 2024 — MAY 2025', role: 'Research Assistant (Machine Learning)', org: 'SEAR LAB · Arlington, TX', bullets: ['Built Python and SQL pipelines for 500K+ time-series sensor records and developed XGBoost and ARIMA predictive models.', 'Modeling work contributed to a 15% production-efficiency improvement in the research environment.', 'Automated data workflows and reporting, reducing KPI reporting time by 40%; dashboards were adopted for weekly KPI tracking.'] },
+  {
+    date: 'AUGUST 2025 — JANUARY 2026',
+    role: 'Applied AI/ML Engineer',
+    org: 'American College of Emergency Physicians (ACEP)',
+    location: 'Irving, TX',
+    bullets: [
+      'Built AskEMDI, an LLM-powered natural-language-to-SQL platform using Amazon Bedrock and Anthropic Claude, enabling emergency physicians and researchers to query structured emergency-medicine data without writing SQL.',
+      'Engineered ETL/ELT pipelines using Azure Data Factory and Azure Synapse Analytics to ingest, cleanse, transform, and validate a dataset containing 23M+ de-identified encounters, creating the structured data foundation for AskEMDI and research analysis.',
+      'Built Python and SQL data-quality validation workflows to identify missing values, inconsistent records, and clinical coding issues before data reached downstream LLM and analytics workflows, improving data reliability for AI-driven analysis.',
+      'Partnered with clinicians and operations stakeholders to gather requirements, demonstrate prototypes, and iterate on query logic and outputs, translating real-world research questions into usable AI workflows for nontechnical physicians and researchers.',
+    ],
+  },
+  {
+    date: 'AUGUST 2024 — MAY 2025',
+    role: 'Research Assistant (Machine Learning)',
+    org: 'SEAR LAB',
+    location: 'Arlington, TX',
+    bullets: [
+      'Built Python and SQL data pipelines for 500K+ time-series sensor records, covering data cleaning, feature engineering, and transformation to produce model-ready datasets for predictive modeling and operational analysis.',
+      'Developed XGBoost and ARIMA models to analyze sensor data, identify drivers of operational performance, and generate predictive insights that contributed to a 15% improvement in production efficiency within the research environment.',
+      'Automated data workflows and developed Python/Matplotlib visualizations and Power BI dashboards, reducing KPI reporting time by 40% and improving access to operational insights.',
+      'Partnered with research and engineering stakeholders to define KPI requirements, demonstrate prototype dashboards, and iterate on features and reporting based on feedback. Final dashboards were adopted for weekly KPI tracking.',
+    ],
+  },
+  {
+    date: 'JUNE 2022 — JANUARY 2023',
+    role: 'Operations Analyst',
+    org: 'AIESEC',
+    location: undefined,
+    bullets: [
+      'Analyzed operational performance data and KPIs using Excel and SQL, identifying process inefficiencies that improved productivity by 15% and reduced operational costs by 10% through data-driven process optimization.',
+      'Built KPI dashboards and automated reporting workflows, collaborating with cross-functional teams to achieve 95% KPI attainment and align analytics insights with organizational performance objectives.',
+      'Maintained cloud-based operational datasets on Google Cloud Platform (GCP), ensuring data accuracy, improving accessibility for analytics reporting, and supporting Agile-driven operational initiatives.',
+    ],
+  },
 ];
 
 export const articles = [
