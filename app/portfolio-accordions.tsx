@@ -1,17 +1,61 @@
 'use client';
 
-import { useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, type ReactNode } from 'react';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
 import type { CaseStudy, ExperienceRole } from './content';
 
+type PortfolioAccordionContextValue = {
+  openSections: ReadonlySet<string>;
+  openSection: (id: string) => void;
+  toggleSection: (id: string) => void;
+};
+
+const PortfolioAccordionContext = createContext<PortfolioAccordionContextValue | null>(null);
+
+function usePortfolioAccordionContext() {
+  const context = useContext(PortfolioAccordionContext);
+  if (!context) throw new Error('Portfolio accordions must be rendered inside PortfolioAccordionProvider.');
+  return context;
+}
+
+export function PortfolioAccordionProvider({ children }: { children: ReactNode }) {
+  const [openSections, setOpenSections] = useState<Set<string>>(() => new Set());
+  const context: PortfolioAccordionContextValue = {
+    openSections,
+    openSection: (id) => setOpenSections((current) => current.has(id) ? current : new Set(current).add(id)),
+    toggleSection: (id) => setOpenSections((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    }),
+  };
+
+  return <PortfolioAccordionContext.Provider value={context}>{children}</PortfolioAccordionContext.Provider>;
+}
+
+export function PortfolioNavigation() {
+  const { openSection } = usePortfolioAccordionContext();
+  const links = [
+    ['experience', 'Experience'],
+    ['projects', 'Projects'],
+    ['skills', 'Skills'],
+    ['education', 'Education'],
+    ['writing', 'Writing'],
+  ] as const;
+
+  return <nav aria-label="Main navigation">{links.map(([id, label]) => <a href={`#${id}`} key={id} onClick={() => openSection(id)}>{label}</a>)}</nav>;
+}
+
 export function PersistentPanel({ id, eyebrow, title, className = '', children }: { id: string; eyebrow: string; title: string; className?: string; children: ReactNode }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const { openSections, toggleSection } = usePortfolioAccordionContext();
+  const isExpanded = openSections.has(id);
   const triggerId = `${id}-toggle`;
   const panelId = `${id}-content`;
 
   return <section className={`persistent-section ${className}`} id={id}>
     <div className="wrap">
-      <button className="persistent-section-header" type="button" id={triggerId} aria-expanded={isExpanded} aria-controls={panelId} onClick={() => setIsExpanded((expanded) => !expanded)}>
+      <button className="persistent-section-header" type="button" id={triggerId} aria-expanded={isExpanded} aria-controls={panelId} onClick={() => toggleSection(id)}>
         <span className="persistent-section-heading"><span className="eyebrow">{eyebrow}</span><span className="persistent-section-title">{title}</span></span>
         <ChevronDown className="persistent-section-chevron" size={21} aria-hidden="true" />
       </button>

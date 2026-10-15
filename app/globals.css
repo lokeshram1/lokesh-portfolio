@@ -127,13 +127,13 @@
 }
 
 /* Independent, persistent editorial panels for projects and writing. */
-.persistent-section{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0 34px;background:#fff}
+.persistent-section{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0 34px;background:#fff;scroll-margin-top:20px}
 .featured-projects-panel{background:var(--wash);padding:34px 0 38px}
 .toolkit-panel{background:var(--wash)}
 .persistent-section-header{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 17px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-align:left;cursor:pointer}
 .persistent-section-heading{display:grid;gap:7px;min-width:0}
-.persistent-section-heading .eyebrow{margin:0}
-.persistent-section-title{font:500 clamp(28px,3.2vw,39px)/1.16 var(--serif);letter-spacing:-1px}
+.persistent-section-heading .eyebrow{margin:0;font-size:11px;letter-spacing:1.1px}
+.persistent-section-title{font:500 clamp(27px,3.05vw,37px)/1.16 var(--serif);letter-spacing:-1px}
 .persistent-section-title::after{content:'.';color:var(--blue)}
 .persistent-section-chevron{flex:0 0 auto;color:var(--blue);transition:transform .2s ease}
 .persistent-section-header[aria-expanded="true"] .persistent-section-chevron{transform:rotate(180deg)}
@@ -169,7 +169,7 @@
 @media(max-width:650px){
   .persistent-section,.featured-projects-panel,.technical-writing-panel{padding:22px 0 25px}
   .persistent-section-header{gap:14px;padding-bottom:12px}
-  .persistent-section-title{font-size:27px;letter-spacing:-.7px}
+  .persistent-section-title{font-size:26px;letter-spacing:-.7px}
   .persistent-panel-body{padding-top:13px}
   .featured-projects-panel .persistent-panel-body{padding-top:14px}
   .featured-projects-panel .project-accordion-list .accordion-trigger{padding-top:12px;padding-bottom:12px}

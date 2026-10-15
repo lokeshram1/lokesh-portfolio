@@ -1,16 +1,16 @@
 import { ArrowDownRight, ArrowRight, ArrowUpRight, Github, Mail, MapPin, FileText, BrainCircuit, Code2, Database, Workflow } from 'lucide-react';
 import Image from 'next/image';
 import { articles, email, experience, githubProfile, linkedInUrl, projects, skills } from './content';
-import { ExperienceAccordions, PersistentPanel, ProjectAccordions } from './portfolio-accordions';
+import { ExperienceAccordions, PersistentPanel, PortfolioAccordionProvider, PortfolioNavigation, ProjectAccordions } from './portfolio-accordions';
 
 const icons = [BrainCircuit, Code2, Database, Workflow];
 
 export default function Home() {
-  return <main>
+  return <PortfolioAccordionProvider><main>
     <div className="viewport-group viewport-group-hero" id="home">
       <header className="topbar compact-topbar">
         <a className="wordmark" href="#home">Lokesh Ram Hariram<span>.</span></a>
-        <nav aria-label="Main navigation"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#writing">Writing</a></nav>
+        <PortfolioNavigation/>
         <div className="header-links">
           <a href="/Lokesh-Ram-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
@@ -81,5 +81,5 @@ export default function Home() {
       </section>
       <footer className="footer wrap"><a className="wordmark" href="#home">Lokesh Ram Hariram<span>.</span></a><p>AI applications, reliable integrations, and data-driven systems.</p><div className="footer-links"><a href={githubProfile} target="_blank" rel="noopener noreferrer">GitHub</a><a href={linkedInUrl} target="_blank" rel="noopener noreferrer">LinkedIn</a><a href={`mailto:${email}`}>Email</a></div><small>© {new Date().getFullYear()} Lokesh Ram Hariram</small></footer>
     </div>
-  </main>;
+  </main></PortfolioAccordionProvider>;
 }
