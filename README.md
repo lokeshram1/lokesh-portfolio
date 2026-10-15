@@ -1,4 +1,4 @@
-# Lokesh Ram Hariram — AI / ML / FDE Portfolio
+# Lokesh Ram Hariram — AI / ML / Data Engineering Portfolio
 
 An editorial, responsive portfolio built with Next.js 15, React 19, TypeScript, and CSS. The site presents AI application engineering, machine learning, integrations, and data systems through project case studies.
 

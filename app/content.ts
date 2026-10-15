@@ -99,7 +99,15 @@ export const skills = [
   { title: 'Analytics & Collaboration', items: ['Power BI', 'DAX', 'Power Query', 'KPI analysis', 'Requirements gathering', 'Technical discovery', 'Prototyping', 'Systems integration', 'Solution design'] },
 ];
 
-export const experience = [
+export type ExperienceRole = {
+  date: string;
+  role: string;
+  org: string;
+  location?: string;
+  bullets: string[];
+};
+
+export const experience: ExperienceRole[] = [
   {
     date: 'AUGUST 2025 — JANUARY 2026',
     role: 'Applied AI/ML Engineer',
