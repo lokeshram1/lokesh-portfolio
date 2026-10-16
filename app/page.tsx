@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Github, Mail, MapPin, FileText, BrainCircuit, Code2, Database, Workflow } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Github, Mail, MapPin, FileText, BrainCircuit, Code2, Database, Workflow, BriefcaseBusiness } from 'lucide-react';
 import Image from 'next/image';
 import { articles, email, experience, githubProfile, linkedInUrl, projects, skills } from './content';
 import { ExperienceAccordions, PersistentPanel, PortfolioAccordionProvider, PortfolioNavigation, ProjectAccordions } from './portfolio-accordions';
@@ -23,14 +23,14 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span className="status-dot"/> AI ENGINEERING <i>/</i> MACHINE LEARNING <i>/</i> DATA ENGINEERING</p>
           <p className="hero-role">AI/ML ENGINEER · DATA ENGINEER</p>
-          <h1>I build AI systems that connect LLMs, data, and <em>real-world workflows.</em></h1>
-          <p className="intro">From AI agents and API integrations to predictive ML systems, I build practical software that turns complex requirements into working, testable solutions.</p>
+          <h1>AI/ML Engineer &amp; Data Engineer building <em>useful AI systems.</em></h1>
+          <p className="intro">I build AI applications, integrations, and data pipelines that turn complex requirements into working, testable software.</p>
           <p className="credibility">Hands-on work includes an LLM-powered natural-language-to-SQL platform, predictive ML models, and an API verification workflow for 10 selected endpoints.</p>
           <div className="hero-actions">
-            <a className="button primary" href="#projects">Explore My Projects <ArrowDownRight size={16}/></a>
-            <a className="text-link" href="/Lokesh-Ram-Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume <ArrowUpRight size={15}/></a>
-            <a className="text-link" href={githubProfile} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={15}/></a>
-            <a className="text-link" href={linkedInUrl} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={15}/></a>
+            <a className="button primary" href="#projects">View Projects <ArrowDownRight size={16}/></a>
+            <a className="button secondary" href="#experience">Explore Experience <BriefcaseBusiness size={15}/></a>
+            <a className="button secondary" href={githubProfile} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={15}/></a>
+            <a className="button secondary" href={`mailto:${email}`}>Contact Me <ArrowRight size={15}/></a>
           </div>
           <div className="hero-meta"><span><MapPin size={15}/> Austin, TX, USA · Open to relocation</span><span><Mail size={15}/> <a href={`mailto:${email}`}>{email}</a></span></div>
         </div>
