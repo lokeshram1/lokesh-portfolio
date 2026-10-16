@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Github, Mail, MapPin, FileText, BrainCircuit, Code2, Database, Workflow, BriefcaseBusiness } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Github, Linkedin, Mail, MapPin, BrainCircuit, Code2, Database, Workflow, BriefcaseBusiness, FileText } from 'lucide-react';
 import Image from 'next/image';
 import { articles, email, experience, githubProfile, linkedInUrl, projects, skills } from './content';
 import { ExperienceAccordions, PersistentPanel, PortfolioAccordionProvider, PortfolioNavigation, ProjectAccordions } from './portfolio-accordions';
@@ -25,11 +25,14 @@ export default function Home() {
           <p className="hero-role">AI/ML ENGINEER · DATA ENGINEER</p>
           <h1>AI/ML Engineer &amp; Data Engineer building <em>useful AI systems.</em></h1>
           <p className="intro">I build AI applications, integrations, and data pipelines that turn complex requirements into working, testable software.</p>
+          <p className="hero-credential">M.S. in Information Systems — The University of Texas at Arlington (UTA)</p>
           <p className="credibility">Hands-on work includes an LLM-powered natural-language-to-SQL platform, predictive ML models, and an API verification workflow for 10 selected endpoints.</p>
           <div className="hero-actions">
             <a className="button primary" href="#projects">View Projects <ArrowDownRight size={16}/></a>
             <a className="button secondary" href="#experience">Explore Experience <BriefcaseBusiness size={15}/></a>
             <a className="button secondary" href={githubProfile} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={15}/></a>
+            <a className="button secondary" href="/Lokesh-Ram-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé <FileText size={15}/></a>
+            <a className="button secondary" href={linkedInUrl} target="_blank" rel="noopener noreferrer"><Linkedin size={15} aria-hidden="true"/> LinkedIn</a>
             <a className="button secondary" href={`mailto:${email}`}>Contact Me <ArrowRight size={15}/></a>
           </div>
           <div className="hero-meta"><span><MapPin size={15}/> Austin, TX, USA · Open to relocation</span><span><Mail size={15}/> <a href={`mailto:${email}`}>{email}</a></span></div>

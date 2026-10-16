@@ -106,6 +106,7 @@ export type ExperienceRole = {
   location?: string;
   bullets: string[];
   highlights: string[];
+  technologies: string[];
 };
 
 export const experience: ExperienceRole[] = [
@@ -115,6 +116,7 @@ export const experience: ExperienceRole[] = [
     org: 'American College of Emergency Physicians (ACEP)',
     location: 'Irving, TX',
     highlights: ['23M+ encounters processed', 'LLM-powered natural-language-to-SQL'],
+    technologies: ['Amazon Bedrock', 'Anthropic Claude', 'Azure Data Factory', 'Azure Synapse', 'Python', 'SQL'],
     bullets: [
       'Built AskEMDI, an LLM-powered natural-language-to-SQL platform using Amazon Bedrock and Anthropic Claude, enabling emergency physicians and researchers to query structured emergency-medicine data without writing SQL.',
       'Engineered ETL/ELT pipelines using Azure Data Factory and Azure Synapse Analytics to ingest, cleanse, transform, and validate a dataset containing 23M+ de-identified encounters, creating the structured data foundation for AskEMDI and research analysis.',
@@ -128,6 +130,7 @@ export const experience: ExperienceRole[] = [
     org: 'SEAR LAB',
     location: 'Arlington, TX',
     highlights: ['500K+ sensor records', '40% less KPI reporting time', '15% production-efficiency improvement'],
+    technologies: ['Python', 'SQL', 'XGBoost', 'ARIMA', 'Matplotlib', 'Power BI'],
     bullets: [
       'Built Python and SQL data pipelines for 500K+ time-series sensor records, covering data cleaning, feature engineering, and transformation to produce model-ready datasets for predictive modeling and operational analysis.',
       'Developed XGBoost and ARIMA models to analyze sensor data, identify drivers of operational performance, and generate predictive insights that contributed to a 15% improvement in production efficiency within the research environment.',
@@ -141,6 +144,7 @@ export const experience: ExperienceRole[] = [
     org: 'AIESEC',
     location: undefined,
     highlights: ['15% productivity improvement', '10% lower operating costs', '95% KPI attainment'],
+    technologies: ['Excel', 'SQL', 'Google Cloud Platform'],
     bullets: [
       'Analyzed operational performance data and KPIs using Excel and SQL, identifying process inefficiencies that improved productivity by 15% and reduced operational costs by 10% through data-driven process optimization.',
       'Built KPI dashboards and automated reporting workflows, collaborating with cross-functional teams to achieve 95% KPI attainment and align analytics insights with organizational performance objectives.',

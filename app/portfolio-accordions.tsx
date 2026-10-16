@@ -83,6 +83,7 @@ export function ExperienceAccordions({ items }: { items: ExperienceRole[] }) {
             <span className="accordion-meta">{item.org}{item.location ? ` · ${item.location}` : ''} <span aria-hidden="true">·</span> {item.date}</span>
             <span className="accordion-preview">{item.bullets[0]}</span>
             <span className="experience-highlights" aria-label="Selected outcomes">{item.highlights.map((highlight) => <span key={highlight}>{highlight}</span>)}</span>
+            <span className="experience-tech-row"><span>TOOLS</span>{item.technologies.map((technology) => <span key={technology}>{technology}</span>)}</span>
           </span>
           <ChevronDown className="accordion-chevron" size={18} aria-hidden="true" />
         </button>
@@ -118,7 +119,7 @@ export function ProjectAccordions({ items }: { items: CaseStudy[] }) {
           </button>
           <div className="project-row-links">
             <a href={`/projects/${item.slug}`} aria-label={`Open ${item.title} case study`}>Case study <ArrowUpRight size={13}/></a>
-            {item.github && <a href={item.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} GitHub link`}>GitHub <ArrowUpRight size={13}/></a>}
+            {item.github && <a className="project-github-link" href={item.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.title} GitHub link`}>{item.slug === 'incidentiq' ? 'View on GitHub' : 'GitHub'} <ArrowUpRight size={13}/></a>}
           </div>
         </div>
         <div className="accordion-panel project-accordion-panel" id={panelId} role="region" aria-labelledby={triggerId} hidden={!isOpen}>
